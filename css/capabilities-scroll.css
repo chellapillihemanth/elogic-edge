@@ -1,0 +1,554 @@
+/* ============================================================
+   capabilities-scroll.css — Premium Stacked Scroll Capabilities
+   ============================================================ */
+.nav-link--active {
+  background: #fff !important;
+  color: #0079f3 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06) !important;
+}
+/* ── INTRO SECTION ─────────────────────────────────────────── */
+.csc-intro {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+}
+
+.ap-hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, rgba(2, 10, 34, 0.88) 0%, rgba(0, 38, 110, 0.60) 52%, rgba(0, 16, 54, 0.35) 100%),
+    url("../assets/images/Capabilities.png") center / cover no-repeat;
+}
+
+.csc-intro-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.csc-intro-eyebrow {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0079f3;
+  margin-bottom: 18px;
+}
+
+.csc-intro-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(34px, 4.2vw, 52px);
+  font-weight: 700;
+  line-height: 1.12;
+  color: #ffffff;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.csc-intro-sub {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.65;
+  max-width: 500px;
+}
+
+.csc-intro-scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.csc-scroll-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1.5px solid #cbd5e1;
+  animation: csc-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes csc-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(7px);
+  }
+}
+
+/* ── STACKED SECTION ────────────────────────────────────────── */
+.csc-section {
+  position: relative;
+  background: #eef2ff;
+}
+
+.csc-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  padding: 60px 24px 80px;
+}
+
+/* ── PROGRESS DOTS ──────────────────────────────────────────── */
+.csc-progress {
+  position: absolute;
+  right: clamp(16px, 3vw, 52px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.csc-progress-dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(11, 21, 38, 0.22);
+  transition:
+    background 0.3s,
+    transform 0.3s,
+    width 0.3s,
+    height 0.3s;
+  cursor: default;
+}
+
+.csc-progress-dot--active {
+  background: #0079f3;
+  transform: scale(1.5);
+}
+
+/* ── CARDS ──────────────────────────────────────────────────── */
+.csc-card {
+  width: 100%;
+  max-width: 1100px;
+  height: min(82vh, 780px);
+  min-height: 500px;
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.12),
+    0 16px 48px rgba(0, 0, 0, 0.18),
+    0 36px 90px rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+/* Subtle fade at bottom edge */
+.csc-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 8, 55, 0.45));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ── Card background: image + gradient overlay ── */
+/* .csc-card-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+} */
+
+.csc-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0079f3, #0050cc);
+}
+
+/* Alternate gradient for visual variety */
+/* .csc-card {
+  background: linear-gradient(135deg, #0079f3, #0050cc);
+} */
+
+/* ── Card inner content ── */
+.csc-card-inner {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  padding: 40px 52px 120px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ── Card header: number + title ── */
+.csc-card-header {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  margin-bottom: 26px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  flex-shrink: 0;
+}
+
+.csc-card-num {
+  font-family: "Sora", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffff;
+}
+
+.csc-card-title {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(22px, 3vw, 40px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.18;
+}
+
+/* ── Card body: two-column layout ── */
+.csc-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1.65fr;
+  gap: 40px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* ── Our View column ── */
+.csc-view-col {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+}
+
+.csc-section-label {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 14px;
+  flex-shrink: 0;
+}
+
+.csc-view-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.5;
+  overflow: hidden;
+  font-weight: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Core Capabilities column ── */
+.csc-caps-col {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.csc-caps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* ── Glassmorphism mini-cards ── */
+.csc-glass {
+  background: rgba(255, 255, 255, 0.09);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 18px 20px 20px;
+  transition:
+    transform 0.26s ease,
+    border-color 0.26s ease,
+    background 0.26s ease;
+  overflow: hidden;
+}
+
+.csc-glass:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.36);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.csc-glass-title {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.csc-glass-body {
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============================================================
+   DESKTOP — cards become absolutely positioned (JS adds .csc-desktop)
+   ============================================================ */
+@media (min-width: 768px) {
+  body.csc-desktop .csc-wrapper {
+    height: 100vh;
+    padding: 0;
+    overflow: visible;
+  }
+
+  body.csc-desktop .csc-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* GSAP sets xPercent:-50, yPercent:-50 */
+  }
+
+  body.csc-desktop .csc-progress {
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   TABLET (≤ 1024px)
+   ============================================================ */
+@media (max-width: 1024px) {
+  .csc-card-inner {
+    padding: 34px 38px 42px;
+  }
+
+  .csc-card-header {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+  }
+
+  .csc-card-body {
+    gap: 28px;
+  }
+
+  .csc-caps-grid {
+    gap: 10px;
+  }
+
+  .csc-glass {
+    padding: 14px 16px 16px;
+  }
+
+  .csc-glass-title {
+    font-size: 12.5px;
+  }
+
+  .csc-glass-body {
+    font-size: 11px;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* ============================================================
+   MOBILE (< 768px) — vertical stack, no sticky
+   ============================================================ */
+@media (max-width: 767px) {
+  .csc-intro {
+    padding: 70px 20px 48px;
+  }
+
+  .csc-intro-heading {
+    font-size: 30px;
+  }
+
+  .csc-intro-sub {
+    font-size: 15px;
+  }
+
+  .csc-wrapper {
+    gap: 20px;
+    padding: 40px 14px 56px;
+  }
+
+  .csc-card {
+    height: auto;
+    min-height: unset;
+    max-width: 100%;
+    border-radius: 20px;
+  }
+
+  .csc-card::after {
+    display: none;
+  }
+
+  .csc-card-bg img {
+    filter: blur(2px) brightness(0.45) saturate(0.65);
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .csc-card-inner {
+    padding: 28px 22px 32px;
+  }
+
+  .csc-card-header {
+    margin-bottom: 18px;
+    padding-bottom: 16px;
+  }
+
+  .csc-card-body {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    overflow: visible;
+  }
+
+  .csc-caps-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .csc-glass-body {
+    -webkit-line-clamp: 3;
+  }
+
+  .csc-progress {
+    display: none;
+  }
+}
+
+/* ============================================================
+   SMALL MOBILE (≤ 480px)
+   ============================================================ */
+@media (max-width: 480px) {
+  .csc-card-inner {
+    padding: 22px 18px 26px;
+  }
+
+  .csc-caps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .csc-glass {
+    padding: 14px 15px 16px;
+  }
+
+  .csc-glass-title {
+    font-size: 13px;
+  }
+
+  .csc-glass-body {
+    font-size: 12px;
+    -webkit-line-clamp: 4;
+  }
+}
+
+
+/* ============================================================
+   CAPABILITIES FILTER NAV
+============================================================ */
+
+.csc-filter {
+  width: 100%;
+  padding: 30px 24px 40px;
+  background: #f4f7fb;
+}
+
+.csc-filter-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.csc-filter-wrap::-webkit-scrollbar {
+  display: none;
+}
+
+.csc-filter-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 14px 24px;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0b1526;
+  font-family: "Sora", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+.csc-filter-btn:hover {
+  background: #0079f3;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.csc-filter-btn.active {
+  background: linear-gradient(135deg, #0079f3, #0050cc);
+  color: #fff;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .csc-filter {
+    padding: 0 14px 28px;
+  }
+
+  .csc-filter-btn {
+    font-size: 12px;
+    padding: 12px 18px;
+  }
+}
+
+.capabilities-image {
+  width: 100%;
+  height: 100%px;
+  border-radius: 12px;
+}

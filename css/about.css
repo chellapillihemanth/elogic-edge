@@ -1,0 +1,793 @@
+/* ============================================================
+       ABOUT US — PAGE-SPECIFIC STYLES
+       ============================================================ */
+
+/* ---- HERO ---- */
+.about-hero {
+  
+    position: relative;
+    min-height: 460px;
+    background: url("../assets/videos/ourprocessvid.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 80px 0 72px;
+  
+}
+
+
+  .about-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* dark overlay */
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 2%,
+      rgba(0, 0, 0, 0.48) 45%,
+      rgba(0, 0, 0, 0.18) 100%
+    );
+    z-index: 1;
+  }
+
+
+.about-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-hero h1 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(34px, 4.2vw, 52px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.12;
+  max-width: 650px;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  margin-left: 0;
+}
+
+.about-hero p {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(15px, 1.3vw, 18px);
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 540px;
+  line-height: 1.65;
+  text-align: left;
+  margin-left: 0;
+}
+
+/* ---- WHO ARE WE ---- */
+.who-section {
+  position: relative;
+  background: #f4f7fb;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+/* 🔥 Globe Image */
+.who-section::after {
+  content: "";
+  position: absolute;
+  right: 600px;
+  top: -180px;
+
+  width: 900px;
+  height: 900px;
+
+  background: url("../assets/images/Events/globe.png") no-repeat center;
+  background-size: contain;
+
+  opacity: 1; /* 🔥 increase for testing */
+  /* border: 2px solid red; debug */
+}
+
+/* Layout */
+.who-container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  min-height: 200px;
+}
+
+/* Left Title */
+.who-left h2 {
+  font-family: "Sora", sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: #0079f3;
+  line-height: 1.1;
+}
+
+/* Right Text */
+.who-right {
+  max-width: 500px;
+}
+
+.who-right p {
+  font-size: 20px;
+  color: #3a4a5e;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.who-right p:last-child {
+  margin-bottom: 0;
+}
+
+.who-right p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- STAT CARDS ---- */
+.stats-section {
+  background: #fff;
+  padding: 44px 0 72px;
+  position: relative;
+  z-index: 1;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.stat-blue-card {
+  background: #0079f3;
+  border-radius: 12px;
+  padding: 40px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-blue-num {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(32px, 3.5vw, 60px);
+  font-weight: 600;
+  color: #fff;
+  line-height: 1;
+}
+
+.stat-blue-label {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ---- MISSION & VISION ---- */
+.mv-section {
+  background: #fff;
+  padding: 56px 0 72px;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.mv-card {
+  border-radius: 16px;
+  padding: 32px 28px;
+}
+
+.mv-card.mission {
+  background: #fff;
+  border: 1px solid #e0eaf4;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.mv-card.vision {
+  background: #0079f3;
+}
+
+.mission-iocn {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.mv-card.mission .mv-icon {
+  background: #e6f0ff;
+}
+
+.mv-card.vision .mv-icon {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.mv-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.mv-label {
+  font-family: "Sora", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  /* letter-spacing: 0.12em; */
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.mv-card.mission .mv-label {
+  color: #0079f3;
+}
+.mv-card.vision .mv-label {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.mv-text {
+  font-size: 20px;
+  /* line-height: 1.65; */
+  font-weight: 400;
+}
+
+.mv-card.mission .mv-text {
+  color: #0d1b2a;
+}
+.mv-card.vision .mv-text {
+  color: #fff;
+}
+
+/* ---- OUR JOURNEY ---- */
+.journey-section {
+  background: linear-gradient(
+    150deg,
+    #1565e8 0%,
+    #0d4fd4 40%,
+    #0a3fb8 75%,
+    #0c2e9a 100%
+  );
+  padding: 64px 0 52px;
+  position: relative;
+  overflow: hidden;
+}
+
+.journey-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 50%,
+    rgba(255, 255, 255, 0.06) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+.journey-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.journey-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 48px;
+}
+
+/* ---- Journey Carousel ---- */
+.journey-carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-bottom: 24px;
+}
+
+/* Fixed horizontal line — sits at the center of every dot */
+.journey-hline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 184px; /* jslide-year height (210px) + padding-bottom (10px) - 1px */
+  height: 4px;
+  background: rgba(255, 255, 255, 0.25);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Prev / Next buttons — centered horizontally, at mid-point of active year */
+.journey-arrow {
+  position: absolute;
+  top: 60px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 20;
+  transition: background 0.2s;
+}
+
+.journey-arrow:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.journey-arrow svg {
+  width: 30px;
+  height: 30px;
+  stroke: #fff;
+  stroke-width: 1;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#journeyPrev {
+  right: calc(50% + 30px);
+}
+#journeyNext {
+  left: calc(50% + 30px);
+}
+
+/* Sliding track */
+.journey-track {
+  display: flex;
+  align-items: flex-start;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+/* Each slide — width set by JS (vp / numVisible) */
+.journey-slide {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 60px;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Fixed-height year container keeps dot at a constant Y across all slides */
+.jslide-year {
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+.jslide-year span {
+  font-family: "Sora", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.32);
+
+  display: inline-block;
+  transform: rotate(-90deg);
+
+  /* writing-mode: vertical-lr; */
+  text-orientation: upright;
+
+  letter-spacing: 0em;
+  line-height: 0;
+  transition:
+    font-size 0.45s ease-in-out,
+    color 0.4s ease-in-out;
+}
+
+.journey-slide.active .jslide-year span {
+  font-size: clamp(32px, 4vw, 30px);
+  color: #fff;
+}
+
+/* Dot */
+.jslide-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  transition: all 0.45s ease-in-out;
+}
+
+.journey-slide.active .jslide-dot {
+  background: #fff;
+  border-color: #fff;
+  transform: scale(1.9);
+  box-shadow:
+    0 0 0 5px rgba(255, 255, 255, 0.18),
+    0 0 16px rgba(255, 255, 255, 0.45);
+}
+
+/* Description — invisible by default, bright when active */
+.jslide-desc {
+  font-family: "DM Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding: 14px 8px 0;
+  line-height: 1.55;
+  margin: 0;
+  transition: color 0.4s ease-in-out;
+}
+
+.journey-slide.active .jslide-desc {
+  color: rgba(255, 255, 255, 0.82);
+}
+.journey-slide:not(.active) .jslide-desc {
+  transform: scale(0.6);
+}
+
+.journey-slide.active .jslide-desc {
+  transform: scale(1);
+}
+/* Active year glow background */
+.journey-slide.active .jslide-year {
+  position: relative;
+}
+
+.journey-slide.active .jslide-year::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: #fff;
+  border-radius: 50%;
+  filter: blur(20px);
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  filter: blur(80px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ---- OUR VALUES ---- */
+.values-section {
+  background: #fff;
+  padding: 72px 0 80px;
+}
+
+.values-heading {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(22px, 2.8vw, 34px);
+  font-weight: 600;
+  color: #0079f3;
+  text-align: center;
+  margin-bottom: 48px;
+  text-transform: uppercase;
+}
+
+.values-row1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.values-row2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  max-width: calc(66.666% + 9px);
+  margin: 0 auto;
+}
+
+.value-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 22px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition:
+    box-shadow 0.25s,
+    transform 0.25s;
+  box-shadow: 0 8px 24px rgba(0, 80, 200, 0.1);
+}
+
+.value-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 80, 200, 0.09);
+}
+
+.growth-icon {
+  width: 62px;
+  height: 62px;
+  /* background: #e6f0ff; */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.value-title {
+  font-family: "Sora", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  color: #0d1b2a;
+}
+
+.value-desc {
+  font-size: 12px;
+  color: #5a6b80;
+  line-height: 1.65;
+}
+
+/* ---- CTA ---- */
+.about-cta {
+  background: linear-gradient(135deg, #0079f3 0%, #0050cc 100%);
+  padding: 88px 24px;
+  text-align: center;
+}
+
+.about-cta h2 {
+  font-family: "Sora", sans-serif;
+  font-size: clamp(28px, 3.5vw, 44px);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.about-cta p {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.82);
+  margin-bottom: 36px;
+}
+
+.btn-about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.65);
+  padding: 14px 38px;
+  border-radius: 100px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: "Sora", sans-serif;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.btn-about-cta:hover {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: #fff;
+}
+
+/* ============================================================
+       MOBILE ACCORDION FOOTER
+       ============================================================ */
+.footer-acc-head {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-acc-head h4 {
+  font-family: "Sora", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.footer-acc-icon {
+  width: 18px;
+  height: 18px;
+  stroke: rgba(255, 255, 255, 0.55);
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.25s;
+}
+
+.footer-col.open .footer-acc-icon {
+  transform: rotate(180deg);
+}
+
+.footer-acc-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+}
+
+/* ============================================================
+       RESPONSIVE
+       ============================================================ */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .who-left {
+    flex: 0 0 40%;
+  }
+
+  .values-row2 {
+    max-width: calc(66.666% + 9px);
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero */
+  .about-hero {
+    padding: 52px 0 52px;
+  }
+
+  /* Who Are We */
+  .who-section {
+    padding: 48px 0 0;
+  }
+  .who-section::before {
+    width: 300px;
+    height: 300px;
+  }
+  .globe-rings {
+    width: 300px;
+    height: 300px;
+  }
+
+  .who-inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .who-left {
+    flex: none;
+    width: 100%;
+  }
+
+  /* Stats */
+  .stats-section {
+    padding: 32px 0 52px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Mission/Vision */
+  .mv-section {
+    padding: 48px 0 52px;
+  }
+  .mv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Journey carousel — mobile: 3 visible slides, compact spacing */
+  .journey-section {
+    padding: 48px 0 48px;
+  }
+  .journey-slide.active .jslide-year span {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  /* Values */
+  .values-section {
+    padding: 52px 0 56px;
+  }
+  .values-row1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .values-row2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+
+  /* CTA */
+  .about-cta {
+    padding: 64px 20px;
+  }
+
+  /* Footer: show accordion headers, hide desktop h4 titles inside link cols */
+  .footer-acc-head {
+    display: flex;
+  }
+  .footer-col h4 {
+    display: none;
+  }
+  .footer-acc-body {
+    max-height: 0;
+    gap: 0;
+    transition: max-height 0.3s ease;
+    padding-top: 0;
+  }
+  .footer-acc-body a {
+    padding: 8px 0;
+  }
+  .footer-col.open .footer-acc-body {
+    max-height: 240px;
+  }
+
+  /* Mobile footer layout */
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .footer-brand {
+    flex: none;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .stat-blue-card {
+    padding: 24px 20px;
+  }
+  .mv-card {
+    padding: 24px 20px;
+  }
+  .value-card {
+    padding: 24px 20px;
+  }
+  .values-row1 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .values-row2 {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 16px;
+  }
+}
+
+/* (old mobile journey styles removed — carousel handles all viewports) */

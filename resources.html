@@ -1,0 +1,1968 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources — eLT Edge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/resources.css" />
+</head>
+
+<body>
+  <!-- Top Banner -->
+  <div class="top-banner">
+    <span>Looking for Smart Factory &amp; Industrial Intelligence
+      Solutions?</span>
+    <a href="https://faqtis.com" target="_blank" class="banner-link">Visit faqtis.com by eLT Edge
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner container">
+      <div class="nav-logo">
+        <a href="./index.html"><img src="assets/images/logo white bg (1) 1.png" alt="eLT Edge" class="logo-img" /></a>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="approach.html" class="nav-link">Approach</a>
+        <a href="capabilities-scroll.html" class="nav-link">Capabilities</a>
+        <a href="ourworks.html" class="nav-link">Our Works</a>
+        <div class="nav-dropdown">
+          <a href="aboutus.html" class="nav-link dropdown-toggle">
+            About Us
+
+            <span class="dropdown-arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </a>
+
+          <div class="dropdown-menu">
+            <a href="our-team.html">Our Team</a>
+            <a href="careers.html">Careers</a>
+          </div>
+        </div>
+        <a href="resources.html" class="nav-link" style="
+              background: #fff;
+              color: #0079f3;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            ">Resources</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="contact.html" class="btn-contact">Contact Us</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+        ✕
+      </button>
+      <nav class="drawer-links">
+        <a href="approach.html">Approach</a>
+        <a href="capabilities.html">Capabilities</a>
+        <a href="ourworks.html">Our Works</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="resources.html">Resources</a>
+      </nav>
+      <button class="btn-contact drawer-cta">Contact Us</button>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ============================================================
+       MAIN VIEW (hero + tabs + content)
+       ============================================================ -->
+  <div id="mainView">
+    <!-- Hero -->
+    <section class="res-hero">
+      <div class="res-hero-bg blogs-bg" id="resHeroBg"></div>
+      <div class="res-hero-overlay"></div>
+
+      <!-- Blogs hero content -->
+      <div class="res-hero-content" id="blogsHeroContent">
+        <span class="res-hero-badge">LATEST BLOGS</span>
+        <h1 class="res-hero-title">
+          The Hidden Cost of Hardware Prototyping: What Businesses Often
+          Overlook
+        </h1>
+        <p class="res-hero-sub">
+          The world requirement for IoT devices is continuously increasing
+          around sectors, industrial verticals, enterprise and home
+          applications.
+        </p>
+      </div>
+
+      <!-- Events hero content -->
+      <div class="res-hero-content" id="eventsHeroContent" style="display: none">
+        <span class="res-hero-badge">LATEST EVENTS</span>
+        <div class="res-hero-event-title">
+          eLT Edge at Productronica 2025, Bangalore
+        </div>
+      </div>
+
+      <div class="res-hero-dots">
+        <button class="res-hero-dot active"></button>
+        <button class="res-hero-dot"></button>
+        <button class="res-hero-dot"></button>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <div class="res-tabs-wrap">
+      <button class="res-tab active" data-tab="blogs">BLOGS</button>
+      <button class="res-tab" data-tab="events">EVENTS</button>
+    </div>
+
+    <!-- ---- BLOGS CONTENT ---- -->
+    <div id="blogsContent">
+      <section class="blog-list-section">
+        <div class="container">
+          <div class="blog-list" id="blogList">
+            <!-- Cards injected by JS -->
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ---- EVENTS CONTENT ---- -->
+    <div id="eventsContent" style="display: none">
+      <section class="events-section">
+        <div class="events-grid" id="eventsGrid">
+          <!-- Scroll rows injected by JS -->
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- /#mainView -->
+
+  <!-- ============================================================
+       BLOG DETAIL VIEW
+       ============================================================ -->
+  <div id="blogDetailView" style="display: none">
+    <div class="blog-detail-wrap">
+      <!-- Top hero image -->
+      <div class="blog-detail-hero-img">
+        <img id="detailHeroImg" src="assets/images/Events/bloghero.png" alt="" class="detail-hero-img-el" />
+      </div>
+
+      <!-- Content -->
+      <div class="blog-detail-content">
+        <div class="container">
+          <button class="blog-back-nav" id="backToBlogs">
+            &#8249; BLOGS
+          </button>
+          <h1 class="blog-detail-title" id="detailTitle"></h1>
+          <div class="blog-detail-body" id="detailBody"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CTA
+       ============================================================ -->
+  <section class="footer-cta">
+    <div class="container footer-cta-inner">
+      <div class="cta-text">
+        <h2>Have a Product Idea?</h2>
+        <p>
+          Let's turn your vision into a production-ready embedded product.
+        </p>
+      </div>
+      <a href="./contact.html" class="btn-cta-white">Start Your Project →</a>
+    </div>
+  </section>
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="assets/images/logo in white.png" alt="eLT Edge" class="footer-logo" />
+          <p>
+            Embedded product development from concept to mass production. Your
+            trusted engineering partner.
+          </p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/elt_edge/" target="_blank" rel="noopener noreferrer"
+              aria-label="Instagram" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069Zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/company/elt-edge/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286ZM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065Zm1.782 13.019H3.555V9h3.564v11.452ZM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003Z" />
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/eltedge.global/" target="_blank" rel="noopener noreferrer"
+              aria-label="Facebook" class="social-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4>Company</h4>
+            <a href="./index.html">Home</a>
+            <a href="./aboutus.html">About Us</a>
+            <a href="./careers.html">Careers</a>
+            <a href="./resources.html">Blog</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Services</h4>
+            <a href="./capabilities-scroll.html">Hardware Design</a>
+            <a href="./capabilities-scroll.html">Firmware Development</a>
+            <a href="./capabilities-scroll.html">IoT Solutions</a>
+            <a href="./capabilities-scroll.html">Manufacturing</a>
+            <a href="./capabilities-scroll.html">Consulting</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="./resources.html">Case Studies</a>
+            <a href="./resources.html">Technical Articles</a>
+            <a href="./resources.html">FAQs</a>
+            <a href="./resources.html">Documentation</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="tel:+919177444992">+91 9177444992</a>
+            <a href="mailto:info@eltedge.io">info@eltedge.io</a>
+            <a href="./contact.html">Hyderabad, India</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>© 2026 eLT Edge. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* ============================================================
+     RESOURCES PAGE SCRIPT
+     ============================================================ */
+    (function () {
+      "use strict";
+
+      /* ----------------------------------------------------------
+       BLOG DATA
+    ---------------------------------------------------------- */
+      var blogs = [
+        // Blog 1
+        {
+          id: 1,
+          title:
+            "The Hidden Cost of Hardware Prototyping: What Businesses Often Overlook",
+          desc: "The world requirement for IoT devices is continuously increasing around sectors, industrial verticals, enterprise and home applications.",
+          img: "assets/images/blogs-images/blog-1.png",
+          imgBg: "linear-gradient(135deg,#0a1628 0%,#1a3a60 100%)",
+          body: [
+            {
+              type: "p",
+              text: "Hardware prototyping is an essential step in transforming an innovative idea into a market-ready product. Whether developing an Industrial IoT device, smart sensor, edge computing gateway, or embedded system, prototyping helps validate functionality, performance, and user requirements before mass production. However, many organizations underestimate the true cost of hardware prototyping. Beyond component purchases and manufacturing expenses, hidden costs often emerge throughout the development cycle, leading to budget overruns, delayed product launches, and missed market opportunities. Understanding these hidden expenses can help businesses plan more effectively and accelerate product development.",
+            },
+            {
+              type: "h2",
+              text: "The Myth of the Single Prototype",
+            },
+            {
+              type: "p",
+              text: "One of the most common misconceptions is that a product requires only one prototype before production.",
+            },
+            {
+              type: "p",
+              text: "In reality, hardware development involves multiple iterations:",
+            },
+            { type: "h2", text: "Start with a Clear Product Vision" },
+
+            {
+              type: "ul",
+              items: [
+                "Proof of Concept (PoC)",
+                "Engineering Prototype",
+                "Functional Prototype",
+                "Design Validation Testing (DVT)",
+                "Production Validation Testing (PVT)",
+              ],
+            },
+            {
+              type: "p",
+              text: "Each stage introduces new design improvements, testing requirements, and manufacturing adjustments. As a result, development teams often build several versions before achieving a production-ready design.",
+            },
+            { type: "h2", text: "Cost #1: Design Revisions and Rework" },
+            {
+              type: "p",
+              text: "Hardware development rarely goes exactly as planned.",
+            },
+            { type: "p", text: "Engineers frequently encounter::" },
+            {
+              type: "ul",
+              items: [
+                "Circuit design issues",
+                "Thermal management challenges",
+                "Power consumption problems",
+                "Signal integrity concerns",
+                "Mechanical fitment issues",
+              ],
+            },
+            {
+              type: "p",
+              text: "Even small design modifications may require PCB redesigns, additional testing, and new prototype manufacturing runs. These iterative changes can significantly increase development costs if not anticipated early in the project.",
+            },
+          ],
+        },
+        // Blog 2
+        {
+          id: 2,
+          title:
+            "Outsource IoT Development: Save Your Engineering Hours and Achieve 10X Faster Results",
+          desc: "The race to build connected products is accelerating. From Industrial IoT solutions and smart devices to edge computing systems and remote monitoring platforms, businesses are under increasing pressure to innovate faster while maintaining quality and reliability.",
+          img: "assets/images/blogs-images/blog-2.png",
+          imgBg: "linear-gradient(135deg,#1a0a28 0%,#3a1060 100%)",
+          body: [
+            {
+              type: "p",
+              text: "The race to build connected products is accelerating. From Industrial IoT solutions and smart devices to edge computing systems and remote monitoring platforms, businesses are under increasing pressure to innovate faster while maintaining quality and reliability.<br><br>However, building an in-house IoT development team can be expensive, time-consuming, and resource-intensive. Hardware engineers, firmware developers, cloud architects, mobile app developers, and testing specialists all play a critical role in delivering a successful IoT product. <br> <br>This is why many organizations are choosing to outsource IoT development—not just to reduce costs, but to accelerate innovation and achieve better outcomes.",
+            },
+            { type: "h2", text: "The Growing Complexity of IoT Development" },
+            {
+              type: "p",
+              text: "Developing an IoT product involves multiple disciplines working together:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Hardware design and PCB development",
+                "Embedded firmware programming",
+                "Wireless communication integration",
+                "Cloud platform development",
+                "Data analytics and dashboards",
+                "Mobile and web applications",
+                "Security and device management",
+              ],
+            },
+            {
+              type: "p",
+              text: "Managing all these capabilities internally often stretches engineering teams beyond their capacity, resulting in longer development cycles and delayed product launches.",
+            },
+            {
+              type: "h2",
+              text: "The Hidden Cost of Building Everything In-House",
+            },
+            {
+              type: "p",
+              text: "Many businesses focus only on salaries when calculating engineering costs.",
+            },
+            {
+              type: "p",
+              text: "In reality, internal development also requires:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Recruitment and onboarding",
+                "Training and skill development",
+                "Specialized development tools",
+                "Testing equipment",
+                "Infrastructure investments",
+                "Project management overhead",
+              ],
+            },
+            {
+              type: "p",
+              text: "These costs can significantly impact budgets and slow down product development efforts.",
+            },
+            {
+              type: "h2",
+              text: "Why Companies Are Outsourcing IoT Development",
+            },
+            { type: "p", text: "Access to Specialized Expertise" },
+            {
+              type: "p",
+              text: "IoT projects require expertise across hardware, firmware, cloud, and software technologies.",
+            },
+            {
+              type: "p",
+              text: "An experienced IoT engineering partner brings proven methodologies, industry knowledge, and technical expertise that would otherwise take years to build internally.",
+            },
+            {
+              type: "h2",
+              text: "Faster Time-to-Market",
+            },
+
+            {
+              type: "p",
+              text: "Every month spent recruiting engineers or solving technical challenges delays product launches.",
+            },
+            {
+              type: "p",
+              text: "Outsourcing enables businesses to start development immediately with an established team, reducing project timelines and accelerating market entry.",
+            },
+            {
+              type: "h2",
+              text: "Reduced Development Risks",
+            },
+            {
+              type: "p",
+              text: "Experienced IoT partners have already solved common challenges related to:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Connectivity issues",
+                "Device security",
+                "Cloud scalability",
+                "Firmware optimization",
+                "Industrial deployments",
+              ],
+            },
+            {
+              type: "p",
+              text: "This minimizes costly mistakes and improves project success rates.",
+            },
+            {
+              type: "h2",
+              text: "Scalability Without Additional Hiring",
+            },
+            {
+              type: "p",
+              text: "Project requirements often change during development.",
+            },
+            {
+              type: "p",
+              text: "Outsourcing provides flexibility to scale engineering resources up or down without the long-term commitments associated with internal hiring.",
+            },
+            {
+              type: "h2",
+              text: "How Outsourcing Delivers 10X Results",
+            },
+            {
+              type: "p",
+              text: "Organizations that partner with experienced IoT development teams often experience:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Faster product development cycles",
+                "Reduced engineering overhead",
+                "Improved product quality",
+                "Better scalability",
+                "Lower operational risks",
+                "Accelerated innovation",
+              ],
+            },
+            {
+              type: "p",
+              text: "Instead of spending valuable engineering hours solving infrastructure and development challenges, internal teams can focus on business strategy, customer needs, and product innovation.",
+            },
+            {
+              type: "h2",
+              text: "Choosing the Right IoT Development Partner",
+            },
+            {
+              type: "p",
+              text: "Not all development partners are the same.",
+            },
+            {
+              type: "p",
+              text: "Look for a team that offers:",
+            },
+            {
+              type: "ul",
+              items: [
+                "End-to-end IoT product engineering",
+                "Embedded systems expertise",
+                "Cloud and edge computing capabilities",
+                "Industrial IoT experience",
+                "Proven deployment success stories",
+                "Long-term support and maintenance",
+              ],
+            },
+            {
+              type: "p",
+              text: "A strong partner becomes an extension of your engineering team rather than just a service provider.",
+            },
+            {
+              type: "h2",
+              text: "Real-World Impact",
+            },
+            {
+              type: "p",
+              text: "Manufacturers, OEMs, and technology companies are increasingly leveraging outsourced IoT expertise to launch connected products faster and more efficiently. <br> By combining internal business knowledge with external engineering expertise, organizations can accelerate innovation while maintaining full control over product strategy and customer experience.",
+            },
+            {
+              type: "h2",
+              text: "Conclusion",
+            },
+            {
+              type: "p",
+              text: "In today's competitive landscape, speed and execution are critical. Building an IoT product entirely in-house is no longer the only path to success. <br> Outsourcing IoT development enables businesses to reduce engineering overhead, access specialized expertise, minimize risks, and bring products to market faster. <br>The right IoT partner can help transform ambitious ideas into scalable, market-ready solutions—allowing your team to focus on growth while achieving results that would be difficult to accomplish alone.",
+            },
+          ],
+        },
+
+        // Blog3
+
+        {
+          id: 3,
+          title:
+            "What Is Industry 4.0 and the Industry Disruptions Driving the Future of Manufacturing?",
+          desc: "The market for embedded systems and IoT-dominated embedded system is increasing steadily. To meet the demands of high performance, connectivity.",
+          img: "assets/images/blogs-images/blog-3.png",
+          imgBg: "linear-gradient(135deg,#0a1a10 0%,#0a3a28 100%)",
+          body: [
+            {
+              type: "h2",
+              text: "Introduction",
+            },
+            {
+              type: "p",
+              text: "The manufacturing industry is undergoing one of the most significant transformations in its history. Traditional factories that once relied on manual processes and isolated systems are rapidly evolving into intelligent, connected, and data-driven environments. <br> At the heart of this transformation is Industry 4.0, often referred to as the Fourth Industrial Revolution. By combining Industrial IoT (IIoT), Artificial Intelligence (AI), Edge Computing, Cloud Technologies, Robotics, and Data Analytics, Industry 4.0 is reshaping how industries operate, compete, and innovate. <br> But what exactly is Industry 4.0, and why is it disrupting industries worldwide?  ",
+            },
+            { type: "h2", text: "Understanding Industry 4.0" },
+            {
+              type: "p",
+              text: "Industry 4.0 represents the integration of digital technologies into manufacturing and industrial operations. <br> Unlike traditional manufacturing systems, Industry 4.0 enables machines, equipment, sensors, and software systems to communicate and share information in real time.",
+            },
+            { type: "p", text: "This creates smart factories where:" },
+
+            {
+              type: "ul",
+              items: [
+                "Machines monitor their own performance",
+                "Production data is available instantly",
+                "Maintenance becomes predictive rather than reactive",
+                "Processes are optimized automatically",
+                "Decision-making is driven by data",
+              ],
+            },
+            {
+              type: "p",
+              text: "The result is greater efficiency, productivity, and operational visibility across the entire organization.",
+            },
+            { type: "h2", text: "The Evolution of Industrial Revolutions" },
+            {
+              type: "h2",
+              text: "Industry 1.0 – Mechanization",
+            },
+            {
+              type: "p",
+              text: "The first industrial revolution introduced mechanical production powered by water and steam.",
+            },
+            { type: "h2", text: "Industry 2.0 – Mass Production" },
+            {
+              type: "p",
+              text: "Electricity enabled assembly lines and large-scale manufacturing.",
+            },
+            { type: "h2", text: "Industry 3.0 – Automation" },
+            {
+              type: "p",
+              text: "Computers, electronics, and automation systems transformed factory operations.",
+            },
+            { type: "h2", text: "Industry 4.0 – Connected Intelligence" },
+            {
+              type: "p",
+              text: "Today's revolution combines connectivity, automation, intelligence, and real-time analytics to create autonomous and highly efficient operations.",
+            },
+            { type: "h2", text: "Technologies Powering Industry 4.0" },
+            { type: "h2", text: "Industrial IoT (IIoT)" },
+            {
+              type: "p",
+              text: "Connected sensors and devices continuously collect operational data from machines, assets, and production lines.",
+            },
+            {
+              type: "p",
+              text: "Benefits include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Real-time monitoring",
+                "Asset tracking",
+                "Predictive maintenance",
+                "Equipment health analysis",
+                "Remote operations",
+              ],
+            },
+            {
+              type: "h2",
+              text: "Artificial Intelligence and Machine Learning",
+            },
+            {
+              type: "p",
+              text: "AI helps industries analyze massive amounts of operational data to identify patterns and predict future events.",
+            },
+            {
+              type: "p",
+              text: "Applications include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Predictive maintenance",
+                "Quality inspection",
+                "Production optimization",
+                "Demand forecasting",
+              ],
+            },
+            {
+              type: "h2",
+              text: "Edge Computing",
+            },
+            {
+              type: "p",
+              text: "Edge computing processes data closer to machines and equipment instead of relying entirely on cloud infrastructure.",
+            },
+            {
+              type: "p",
+              text: "Benefits include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Faster decision-making",
+                "Lower latency",
+                "Reduced bandwidth usage",
+                "Enhanced reliability",
+              ],
+            },
+            {
+              type: "h2",
+              text: "Cloud Platforms",
+            },
+            {
+              type: "p",
+              text: "Cloud technologies enable centralized management of industrial data and support large-scale analytics across multiple facilities.",
+            },
+            {
+              type: "h2",
+              text: "Smart Automation and Robotics",
+            },
+            {
+              type: "p",
+              text: "Advanced robotics improve production efficiency while reducing repetitive manual tasks and operational errors.",
+            },
+            {
+              type: "h2",
+              text: "Major Industry Disruptions Caused by Industry 4.0",
+            },
+            {
+              type: "h2",
+              text: "1. Predictive Maintenance Replacing Reactive Maintenance",
+            },
+            {
+              type: "p",
+              text: "Traditional maintenance approaches often address problems after equipment failure.<br> Industry 4.0 enables organizations to predict failures before they occur using real-time sensor data and AI-driven analytics.",
+            },
+            {
+              type: "p",
+              text: "Impact:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Reduced downtime",
+                "Lower maintenance costs",
+                "Improved asset reliability",
+              ],
+            },
+            {
+              type: "h2",
+              text: "2. Data-Driven Decision Making",
+            },
+            {
+              type: "p",
+              text: "Organizations no longer need to rely on assumptions or historical reports. <br> Real-time operational insights enable faster and more informed decisions across production, maintenance, and supply chain functions.",
+            },
+            {
+              type: "h2",
+              text: "3. Smart Factories Becoming the New Standard",
+            },
+            {
+              type: "p",
+              text: "Factories are evolving into intelligent ecosystems where machines, software, and people work together seamlessly.",
+            },
+            {
+              type: "p",
+              text: "Smart factories offer:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Higher productivity",
+                "Better quality control",
+                "Improved operational visibility",
+                "Greater flexibility",
+              ],
+            },
+            {
+              type: "h2",
+              text: "4. Workforce Transformation",
+            },
+            {
+              type: "p",
+              text: "Industry 4.0 is changing workforce requirements. <br> Instead of replacing employees, technology is empowering workers with better tools, insights, and automation support.",
+            },
+          ],
+        },
+        // Blogs 4
+        {
+          id: 4,
+          title: "How IIoT Can Optimize a Factory Floor",
+          desc: "Modern manufacturing facilities face increasing pressure to improve productivity, reduce downtime, maintain quality standards, and control operational costs. Traditional factory floors often rely on manual monitoring, reactive maintenance, and disconnected systems that limit visibility into day-to-day operations.",
+          img: "assets/images/blogs-images/blog-4.png",
+          imgBg: "linear-gradient(135deg,#0a1620 0%,#1a3050 100%)",
+          body: [
+            {
+              type: "p",
+              text: "Modern manufacturing facilities face increasing pressure to improve productivity, reduce downtime, maintain quality standards, and control operational costs. Traditional factory floors often rely on manual monitoring, reactive maintenance, and disconnected systems that limit visibility into day-to-day operations. <br> <br>Industrial Internet of Things (IIoT) is changing this landscape by connecting machines, sensors, equipment, and production systems into a unified digital ecosystem. By collecting and analyzing real-time data, IIoT enables manufacturers to make smarter decisions, optimize processes, and achieve higher operational efficiency.",
+            },
+            { type: "h2", text: "What is IIoT?" },
+            {
+              type: "p",
+              text: "Industrial Internet of Things (IIoT) refers to the use of connected sensors, devices, and industrial equipment that continuously collect and exchange data across manufacturing operations.",
+            },
+            {
+              type: "p",
+              text: "Unlike traditional monitoring systems, IIoT provides real-time insights into machine performance, production status, energy consumption, and asset health, helping organizations operate more efficiently and proactively.",
+            },
+            { type: "h2", text: "Challenges on Traditional Factory Floors" },
+            {
+              type: "p",
+              text: "Many manufacturing facilities struggle with:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Unplanned machine downtime",
+                "Production bottlenecks",
+                "Limited equipment visibility",
+                "High maintenance costs",
+                "Inefficient energy usage",
+                "Quality inconsistencies",
+                "Manual data collection",
+              ],
+            },
+            {
+              type: "p",
+              text: "These challenges often result in reduced productivity and increased operational expenses.",
+            },
+            { type: "h2", text: "How IIoT Optimizes Factory Operations" },
+            { type: "h2", text: "Real-Time Machine Monitoring" },
+            {
+              type: "p",
+              text: "IIoT sensors continuously track machine performance and operating conditions. Manufacturers can monitor:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Machine utilization",
+                "Operating temperatures",
+                "Vibration levels",
+                "Production output",
+                "Equipment status",
+              ],
+            },
+            {
+              type: "p",
+              text: "This visibility helps operators identify issues before they impact production.",
+            },
+            { type: "h2", text: "Predictive Maintenance" },
+            {
+              type: "p",
+              text: "Instead of waiting for equipment to fail, IIoT enables predictive maintenance by monitoring asset health in real time.",
+            },
+            { type: "p", text: "Benefits include:" },
+            {
+              type: "ul",
+              items: [
+                "Reduced downtime",
+                "Lower maintenance costs",
+                "Extended equipment lifespan",
+                "Improved production reliability",
+              ],
+            },
+            {
+              type: "p",
+              text: "Maintenance teams can schedule repairs before critical failures occur.",
+            },
+            { type: "h2", text: "Production Efficiency Improvement" },
+            {
+              type: "p",
+              text: "IIoT provides valuable insights into production processes. Manufacturers can identify:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Idle machines",
+                "Bottlenecks",
+                "Cycle time variations",
+                "Process inefficiencies",
+              ],
+            },
+            {
+              type: "p",
+              text: "These insights help optimize workflows and improve overall equipment effectiveness (OEE).",
+            },
+            { type: "h2", text: "Energy Consumption Monitoring" },
+            {
+              type: "p",
+              text: "Energy costs represent a significant portion of manufacturing expenses. IIoT systems track energy usage across machines and production lines, enabling organizations to:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Detect excessive consumption",
+                "Reduce waste",
+                "Improve sustainability",
+                "Lower operating costs",
+              ],
+            },
+            { type: "h2", text: "Quality Control Enhancement" },
+            {
+              type: "p",
+              text: "Connected sensors can monitor critical production parameters in real time. When deviations occur, operators receive immediate alerts, helping prevent:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Product defects",
+                "Material waste",
+                "Rework costs",
+                "Customer complaints",
+              ],
+            },
+            {
+              type: "p",
+              text: "This results in higher product quality and consistency.",
+            },
+            { type: "h2", text: "Remote Monitoring and Control" },
+            {
+              type: "p",
+              text: "IIoT platforms enable factory managers and operations teams to access production data from anywhere.",
+            },
+            { type: "p", text: "Benefits include:" },
+            {
+              type: "ul",
+              items: [
+                "Faster decision-making",
+                "Improved operational visibility",
+                "Multi-site management capabilities",
+                "Reduced response times",
+              ],
+            },
+            {
+              type: "p",
+              text: "Remote access becomes especially valuable for large-scale manufacturing operations.",
+            },
+            { type: "h2", text: "Key Technologies Behind IIoT" },
+            { type: "h2", text: "Smart Sensors" },
+            {
+              type: "p",
+              text: "Capture operational data from machines and equipment.",
+            },
+            { type: "h2", text: "Edge Computing" },
+            {
+              type: "p",
+              text: "Processes data near the source for faster response times and reduced latency.",
+            },
+            { type: "h2", text: "Cloud Platforms" },
+            {
+              type: "p",
+              text: "Store, analyze, and visualize large volumes of industrial data.",
+            },
+            { type: "h2", text: "Data Analytics" },
+            {
+              type: "p",
+              text: "Transform raw machine data into actionable business insights.",
+            },
+            { type: "h2", text: "Artificial Intelligence" },
+            {
+              type: "p",
+              text: "Identifies patterns, predicts failures, and supports intelligent decision-making.",
+            },
+            { type: "h2", text: "Real-World Benefits of IIoT" },
+            {
+              type: "p",
+              text: "Organizations implementing IIoT solutions often achieve:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Increased machine uptime",
+                "Improved production efficiency",
+                "Reduced maintenance expenses",
+                "Better asset utilization",
+                "Enhanced product quality",
+                "Lower energy consumption",
+                "Higher operational visibility",
+              ],
+            },
+            {
+              type: "p",
+              text: "These improvements directly contribute to stronger profitability and competitive advantage.",
+            },
+            { type: "h2", text: "Building a Smart Factory with IIoT" },
+            {
+              type: "p",
+              text: "A successful IIoT implementation starts with understanding business objectives and operational challenges.",
+            },
+            { type: "p", text: "Manufacturers should focus on:" },
+            {
+              type: "ol",
+              items: [
+                "Identifying critical assets",
+                "Deploying sensors and monitoring systems",
+                "Integrating data across operations",
+                "Implementing analytics and dashboards",
+                "Continuously optimizing processes",
+              ],
+            },
+            {
+              type: "p",
+              text: "This phased approach ensures measurable results while minimizing implementation risks.",
+            },
+            { type: "h2", text: "Conclusion" },
+            {
+              type: "p",
+              text: "Industrial IoT is transforming factory floors from reactive environments into intelligent, connected, and data-driven operations.",
+            },
+            {
+              type: "p",
+              text: "By enabling real-time monitoring, predictive maintenance, production optimization, and energy management, IIoT helps manufacturers improve efficiency, reduce costs, and increase competitiveness.",
+            },
+            {
+              type: "p",
+              text: "As Industry 4.0 adoption continues to accelerate, organizations that embrace IIoT today will be better positioned to build smarter, more resilient, and future-ready manufacturing operations.",
+            },
+          ],
+        },
+        // Blog 5
+        {
+          id: 5,
+          title:
+            "How Smart Buildings Are Paving the Way for Sustainable Infrastructure",
+          desc: "Smart buildings leverage IoT, automation, and intelligent control systems to improve energy efficiency, reduce operational costs, and support sustainable infrastructure initiatives.",
+          img: "assets/images/blogs-images/blog-4.png",
+          imgBg: "linear-gradient(135deg,#0a1628 0%,#1a3a60 100%)",
+          body: [
+            {
+              type: "p",
+              text: "As cities expand and energy demands continue to rise, organizations are under increasing pressure to reduce operational costs, improve energy efficiency, and meet sustainability goals. Traditional buildings often consume excessive resources due to inefficient systems, limited visibility into operations, and reactive maintenance practices.",
+            },
+            {
+              type: "p",
+              text: "Smart buildings are changing this landscape by integrating IoT, automation, data analytics, and intelligent control systems to create more efficient, sustainable, and occupant-friendly environments.",
+            },
+            {
+              type: "p",
+              text: "By leveraging connected technologies, smart buildings are becoming a cornerstone of modern sustainable infrastructure.",
+            },
+
+            {
+              type: "h2",
+              text: "What Is a Smart Building?",
+            },
+            {
+              type: "p",
+              text: "A smart building uses connected sensors, devices, software platforms, and automation systems to monitor, manage, and optimize building operations in real time.",
+            },
+            {
+              type: "p",
+              text: "These systems collect data from various building assets, including:",
+            },
+            {
+              type: "ul",
+              items: [
+                "HVAC systems",
+                "Lighting infrastructure",
+                "Security systems",
+                "Elevators",
+                "Water management systems",
+                "Energy distribution equipment",
+                "Occupancy sensors",
+              ],
+            },
+            {
+              type: "p",
+              text: "The collected data enables intelligent decision-making and automated responses that improve overall building performance.",
+            },
+
+            {
+              type: "h2",
+              text: "Why Sustainability Matters in Modern Infrastructure",
+            },
+            {
+              type: "p",
+              text: "Buildings account for a significant portion of global energy consumption and carbon emissions.",
+            },
+            {
+              type: "p",
+              text: "Common challenges include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Excessive energy usage",
+                "Water wastage",
+                "High operational costs",
+                "Equipment inefficiencies",
+                "Poor indoor environmental quality",
+              ],
+            },
+            {
+              type: "p",
+              text: "Sustainable infrastructure focuses on reducing environmental impact while maximizing operational efficiency and occupant comfort.",
+            },
+            {
+              type: "p",
+              text: "Smart buildings provide the technology foundation needed to achieve these goals.",
+            },
+
+            {
+              type: "h2",
+              text: "How Smart Buildings Enable Sustainability",
+            },
+
+            {
+              type: "h2",
+              text: "Intelligent Energy Management",
+            },
+            {
+              type: "p",
+              text: "One of the biggest advantages of smart buildings is real-time energy monitoring.",
+            },
+            {
+              type: "p",
+              text: "Connected systems continuously track:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Electricity consumption",
+                "HVAC performance",
+                "Lighting usage",
+                "Peak demand patterns",
+              ],
+            },
+            {
+              type: "p",
+              text: "Building operators can identify inefficiencies and optimize energy usage automatically.",
+            },
+            {
+              type: "p",
+              text: "Benefits include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Reduced utility costs",
+                "Lower carbon emissions",
+                "Improved energy efficiency",
+              ],
+            },
+
+            {
+              type: "h2",
+              text: "Smart HVAC Optimization",
+            },
+            {
+              type: "p",
+              text: "Heating, ventilation, and air conditioning systems often represent the largest portion of building energy consumption.",
+            },
+            {
+              type: "p",
+              text: "Smart HVAC systems use:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Occupancy data",
+                "Environmental sensors",
+                "Weather information",
+                "AI-driven analytics",
+              ],
+            },
+            {
+              type: "p",
+              text: "to automatically adjust settings and maintain optimal indoor conditions while minimizing energy waste.",
+            },
+
+            {
+              type: "h2",
+              text: "Automated Lighting Control",
+            },
+            {
+              type: "p",
+              text: "Traditional lighting systems often operate regardless of occupancy levels.",
+            },
+            {
+              type: "p",
+              text: "Smart lighting solutions utilize:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Motion sensors",
+                "Daylight sensors",
+                "Scheduling automation",
+              ],
+            },
+            {
+              type: "p",
+              text: "to ensure lighting is only used when needed. This significantly reduces energy consumption while enhancing occupant comfort.",
+            },
+
+            {
+              type: "h2",
+              text: "Predictive Maintenance",
+            },
+            {
+              type: "p",
+              text: "Instead of waiting for equipment failures, smart buildings use IoT sensors to monitor asset health continuously.",
+            },
+            {
+              type: "p",
+              text: "Predictive maintenance helps organizations:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Detect potential issues early",
+                "Reduce downtime",
+                "Extend equipment lifespan",
+                "Lower maintenance costs",
+              ],
+            },
+            {
+              type: "p",
+              text: "This proactive approach improves operational reliability and sustainability.",
+            },
+
+            {
+              type: "h2",
+              text: "Water Conservation",
+            },
+            {
+              type: "p",
+              text: "Smart buildings can monitor water usage across various systems and identify leaks or unusual consumption patterns.",
+            },
+            {
+              type: "p",
+              text: "Benefits include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Reduced water waste",
+                "Lower utility expenses",
+                "Better resource management",
+              ],
+            },
+            {
+              type: "p",
+              text: "Water conservation is becoming increasingly important for sustainable infrastructure initiatives worldwide.",
+            },
+
+            {
+              type: "h2",
+              text: "The Role of IoT in Smart Buildings",
+            },
+            {
+              type: "p",
+              text: "Industrial IoT and Building IoT technologies act as the foundation of smart infrastructure.",
+            },
+            {
+              type: "p",
+              text: "Connected devices provide real-time insights into:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Occupancy patterns",
+                "Environmental conditions",
+                "Equipment performance",
+                "Energy consumption",
+                "Resource utilization",
+              ],
+            },
+            {
+              type: "p",
+              text: "These insights allow building managers to make informed decisions and automate optimization processes.",
+            },
+
+            {
+              type: "h2",
+              text: "Enhancing Occupant Experience",
+            },
+            {
+              type: "p",
+              text: "Sustainability is not only about reducing energy usage.",
+            },
+            {
+              type: "p",
+              text: "Smart buildings also improve:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Indoor air quality",
+                "Thermal comfort",
+                "Lighting conditions",
+                "Workplace productivity",
+                "Health and well-being",
+              ],
+            },
+            {
+              type: "p",
+              text: "By creating healthier and more comfortable environments, organizations can enhance employee satisfaction and operational performance.",
+            },
+
+            {
+              type: "h2",
+              text: "Smart Buildings and Smart Cities",
+            },
+            {
+              type: "p",
+              text: "Smart buildings play a critical role in the development of smart cities.",
+            },
+            {
+              type: "p",
+              text: "When connected with broader urban infrastructure, buildings can contribute to:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Energy grid optimization",
+                "Sustainable transportation systems",
+                "Environmental monitoring",
+                "Carbon reduction initiatives",
+              ],
+            },
+            {
+              type: "p",
+              text: "This integration supports more resilient and efficient urban ecosystems.",
+            },
+
+            {
+              type: "h2",
+              text: "Future Trends in Smart Building Technology",
+            },
+            {
+              type: "p",
+              text: "Emerging technologies continue to accelerate the adoption of sustainable infrastructure.",
+            },
+            {
+              type: "p",
+              text: "Key trends include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "AI-powered building management",
+                "Edge computing for real-time automation",
+                "Digital twins",
+                "Renewable energy integration",
+                "Carbon monitoring platforms",
+                "Autonomous building operations",
+              ],
+            },
+            {
+              type: "p",
+              text: "These innovations will further improve efficiency and sustainability across commercial, industrial, and residential facilities.",
+            },
+
+            {
+              type: "h2",
+              text: "Conclusion",
+            },
+            {
+              type: "p",
+              text: "Smart buildings are transforming how organizations manage infrastructure, energy consumption, and sustainability initiatives.",
+            },
+            {
+              type: "p",
+              text: "By combining IoT, automation, predictive analytics, and intelligent control systems, smart buildings reduce environmental impact while improving operational efficiency and occupant experiences.",
+            },
+            {
+              type: "p",
+              text: "As sustainability becomes a strategic priority for businesses and governments alike, smart buildings will continue to play a vital role in creating greener, more resilient, and future-ready infrastructure.",
+            },
+          ],
+        },
+
+        // blog 6
+        {
+          id: 6,
+          title:
+            "Connected Devices: The Rule of Thumb in Embedded Systems Development",
+          desc: "Connected devices are transforming industries through embedded systems, IoT connectivity, and intelligent automation. Learn the key principles for building reliable, secure, and scalable solutions.",
+          img: "assets/images/blogs-images/blog-7.png",
+          imgBg: "linear-gradient(135deg,#0a1628 0%,#1a3a60 100%)",
+          body: [
+            {
+              type: "p",
+              text: "The world around us is becoming increasingly connected. From industrial machines and smart sensors to medical devices and consumer electronics, connected devices are transforming how businesses operate and how people interact with technology.",
+            },
+            {
+              type: "p",
+              text: "At the heart of this transformation lies Embedded Systems Development—the foundation that enables devices to sense, process, communicate, and respond intelligently.",
+            },
+            {
+              type: "p",
+              text: "As organizations continue to embrace IoT and Industry 4.0 initiatives, understanding the key principles behind connected device development has become essential for building reliable, secure, and scalable solutions.",
+            },
+
+            {
+              type: "h2",
+              text: "What Are Connected Devices?",
+            },
+            {
+              type: "p",
+              text: "Connected devices are physical products equipped with embedded hardware, software, sensors, and communication capabilities that allow them to exchange data with other systems.",
+            },
+            {
+              type: "p",
+              text: "Examples include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Industrial IoT sensors",
+                "Smart meters",
+                "Asset tracking devices",
+                "Medical monitoring equipment",
+                "Smart building controllers",
+                "Connected manufacturing equipment",
+                "Edge gateways",
+              ],
+            },
+            {
+              type: "p",
+              text: "These devices collect data, process information, and communicate with cloud platforms, applications, or other devices to enable intelligent decision-making.",
+            },
+
+            {
+              type: "h2",
+              text: "Why Embedded Systems Matter",
+            },
+            {
+              type: "p",
+              text: "Every connected device relies on an embedded system to perform its core functions.",
+            },
+            {
+              type: "p",
+              text: "Embedded systems combine:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Microcontrollers and processors",
+                "Firmware and software",
+                "Communication modules",
+                "Sensors and actuators",
+                "Power management systems",
+              ],
+            },
+            {
+              type: "p",
+              text: "The effectiveness of a connected device depends largely on how well these components are designed and integrated.",
+            },
+
+            {
+              type: "h2",
+              text: "The Rule of Thumb for Connected Device Development",
+            },
+            {
+              type: "p",
+              text: "Successful connected devices follow several fundamental principles that guide embedded systems engineering.",
+            },
+
+            {
+              type: "h2",
+              text: "Design for Reliability",
+            },
+            {
+              type: "p",
+              text: "Connected devices often operate in demanding environments where downtime is unacceptable.",
+            },
+            {
+              type: "p",
+              text: "Key considerations include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Robust hardware design",
+                "Environmental durability",
+                "Stable firmware architecture",
+                "Fault tolerance mechanisms",
+              ],
+            },
+            {
+              type: "p",
+              text: "Reliability should always be prioritized from the earliest design stages.",
+            },
+
+            {
+              type: "h2",
+              text: "Prioritize Security from Day One",
+            },
+            {
+              type: "p",
+              text: "As connectivity increases, so do cybersecurity risks.",
+            },
+            {
+              type: "p",
+              text: "A secure embedded system should include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Secure boot processes",
+                "Data encryption",
+                "Device authentication",
+                "Firmware integrity checks",
+                "Secure communication protocols",
+              ],
+            },
+            {
+              type: "p",
+              text: "Security must be built into the device architecture rather than added later.",
+            },
+
+            {
+              type: "h2",
+              text: "Optimize Power Consumption",
+            },
+            {
+              type: "p",
+              text: "Many connected devices operate on batteries or energy-constrained systems.",
+            },
+            {
+              type: "p",
+              text: "Efficient power management helps:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Extend device lifespan",
+                "Reduce maintenance requirements",
+                "Improve operational efficiency",
+              ],
+            },
+            {
+              type: "p",
+              text: "Low-power design is especially important for remote monitoring and industrial sensor applications.",
+            },
+
+            {
+              type: "h2",
+              text: "Build for Scalability",
+            },
+            {
+              type: "p",
+              text: "A prototype may support dozens of devices, but real-world deployments often involve thousands.",
+            },
+            {
+              type: "p",
+              text: "Scalable device architectures should support:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Remote updates",
+                "Device provisioning",
+                "Fleet management",
+                "Cloud integration",
+              ],
+            },
+            {
+              type: "p",
+              text: "Planning for growth early prevents costly redesigns later.",
+            },
+
+            {
+              type: "h2",
+              text: "Enable Seamless Connectivity",
+            },
+            {
+              type: "p",
+              text: "Reliable communication is the backbone of connected systems.",
+            },
+            {
+              type: "p",
+              text: "Common technologies include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Wi-Fi",
+                "Bluetooth Low Energy (BLE)",
+                "LoRaWAN",
+                "Cellular IoT",
+                "Ethernet",
+                "NB-IoT",
+              ],
+            },
+            {
+              type: "p",
+              text: "The right connectivity choice depends on range, bandwidth, power consumption, and deployment requirements.",
+            },
+
+            {
+              type: "h2",
+              text: "The Role of Edge Computing",
+            },
+            {
+              type: "p",
+              text: "Modern connected devices increasingly leverage Edge Computing to process data locally.",
+            },
+            {
+              type: "p",
+              text: "Benefits include:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Faster decision-making",
+                "Reduced latency",
+                "Lower bandwidth usage",
+                "Improved reliability",
+                "Enhanced privacy",
+              ],
+            },
+            {
+              type: "p",
+              text: "By performing analytics closer to the source, devices can respond instantly without relying entirely on cloud infrastructure.",
+            },
+
+            {
+              type: "h2",
+              text: "Common Challenges in Connected Device Development",
+            },
+            {
+              type: "p",
+              text: "Despite their benefits, connected devices present several engineering challenges.",
+            },
+
+            {
+              type: "h2",
+              text: "Hardware and Firmware Integration",
+            },
+            {
+              type: "p",
+              text: "Hardware and software teams must work closely to ensure seamless operation.",
+            },
+
+            {
+              type: "h2",
+              text: "Connectivity Reliability",
+            },
+            {
+              type: "p",
+              text: "Network disruptions can impact device performance if systems are not designed with resilience in mind.",
+            },
+
+            {
+              type: "h2",
+              text: "Security Threats",
+            },
+            {
+              type: "p",
+              text: "Connected devices remain a frequent target for cyberattacks and unauthorized access attempts.",
+            },
+
+            {
+              type: "h2",
+              text: "Lifecycle Management",
+            },
+            {
+              type: "p",
+              text: "Organizations must manage devices throughout their operational life, including updates, maintenance, and performance monitoring.",
+            },
+
+            {
+              type: "h2",
+              text: "Best Practices for Success",
+            },
+            {
+              type: "p",
+              text: "Organizations developing connected products should:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Define clear requirements early",
+                "Choose proven hardware platforms",
+                "Design for security and scalability",
+                "Implement robust testing procedures",
+                "Enable remote diagnostics and updates",
+                "Plan for long-term device management",
+              ],
+            },
+            {
+              type: "p",
+              text: "These practices help reduce risks and improve deployment success.",
+            },
+
+            {
+              type: "h2",
+              text: "The Future of Connected Devices",
+            },
+            {
+              type: "p",
+              text: "The next generation of embedded systems will combine:",
+            },
+            {
+              type: "ul",
+              items: [
+                "Artificial Intelligence",
+                "Edge Computing",
+                "Advanced Sensors",
+                "Digital Twins",
+                "Predictive Analytics",
+                "Autonomous Operations",
+              ],
+            },
+            {
+              type: "p",
+              text: "As technology evolves, connected devices will become smarter, more efficient, and increasingly capable of making independent decisions.",
+            },
+
+            {
+              type: "h2",
+              text: "Conclusion",
+            },
+            {
+              type: "p",
+              text: "Connected devices are driving innovation across industries, enabling smarter operations, real-time visibility, and data-driven decision-making.",
+            },
+            {
+              type: "p",
+              text: "Successful embedded systems development requires a balanced focus on reliability, security, power efficiency, scalability, and connectivity. Organizations that follow these core principles can build future-ready products that deliver long-term value and support the growing demands of the connected world.",
+            },
+            {
+              type: "p",
+              text: "As Industrial IoT and smart technologies continue to expand, connected devices will remain a critical component of digital transformation and Industry 4.0 initiatives.",
+            },
+          ],
+        },
+      ];
+
+      // carasole
+      /* HERO BLOG CAROUSEL */
+
+      const resHeroBg = document.getElementById("resHeroBg");
+      const resHeroTitle = document.querySelector(".res-hero-title");
+      const resHeroSub = document.querySelector(".res-hero-sub");
+      const heroDots = document.querySelectorAll(".res-hero-dot");
+
+      let heroIndex = 0;
+
+      /* only first 3 blogs */
+      const heroBlogs = blogs.slice(0, 3);
+
+      function updateHeroSlide(index) {
+        resHeroBg.style.backgroundImage = `url('${heroBlogs[index].img}')`;
+
+        resHeroTitle.textContent = heroBlogs[index].title;
+
+        resHeroSub.textContent = heroBlogs[index].desc;
+
+        heroDots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+
+      updateHeroSlide(0);
+
+      setInterval(() => {
+        heroIndex++;
+
+        if (heroIndex >= heroBlogs.length) {
+          heroIndex = 0;
+        }
+
+        updateHeroSlide(heroIndex);
+      }, 4000);
+      // dots
+      heroDots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          heroIndex = index;
+
+          updateHeroSlide(heroIndex);
+        });
+      });
+
+      /* ----------------------------------------------------------
+       EVENT PHOTOS DATA (9 placeholder cells)
+    ---------------------------------------------------------- */
+      var eventColors = [
+        "assets/images/Events/events1.png",
+        "assets/images/Events/events2.png",
+        "assets/images/Events/events3.png",
+        "assets/images/Events/events4.png",
+        "assets/images/Events/events5.png",
+        "assets/images/Events/events6.png",
+        "assets/images/Events/events7.png",
+        "assets/images/Events/events8.png",
+        "assets/images/Events/events9.png",
+      ];
+
+      var eventLabels = [
+        "Productronica 2025\nBangalore",
+        "Exhibition Booth\nSetup",
+        "Team at\nEvent",
+        "Product Demo\nSession",
+        "IoT Solutions\nDisplay",
+        "Client\nInteractions",
+        "Smart Factory\nShowcase",
+        "Live Demo\nStation",
+        "Networking\nSession",
+      ];
+
+      /* ----------------------------------------------------------
+       RENDER BLOG LIST
+    ---------------------------------------------------------- */
+      var blogListEl = document.getElementById("blogList");
+
+      blogs.forEach(function (b, idx) {
+        var card = document.createElement("div");
+        card.className = "blog-list-card";
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", b.title);
+
+        card.innerHTML =
+          '<div class="blog-card-img-wrap">' +
+          '<img src="' +
+          b.img +
+          '" alt="' +
+          b.title +
+          '" loading="lazy" />' +
+          "</div>" +
+          '<div class="blog-card-body">' +
+          '<div class="blog-card-title">' +
+          b.title +
+          "</div>" +
+          '<div class="blog-card-desc">' +
+          b.desc +
+          "</div>" +
+          "</div>" +
+          '<div class="blog-card-arrow">' +
+          '<svg viewBox="0 0 18 18"><polyline points="4 14 14 4"/><polyline points="7 4 14 4 14 11"/></svg>' +
+          "</div>";
+
+        card.addEventListener("click", function () {
+          openBlogDetail(idx);
+        });
+        card.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") openBlogDetail(idx);
+        });
+        blogListEl.appendChild(card);
+      });
+
+      /* ----------------------------------------------------------
+       RENDER EVENTS — 3 infinite-scroll rows
+    ---------------------------------------------------------- */
+      var eventsGridEl = document.getElementById("eventsGrid");
+      eventsGridEl.innerHTML = "";
+
+      var eventRowDefs = [
+        {
+          images: [
+            "evnets1",
+            "evnets2",
+            "evnets3",
+            "evnets4",
+            "evnets5",
+            "evnets6",
+            "evnets7",
+            "evnets8",
+            "evnets9",
+          ],
+          dir: "left",
+        },
+        {
+          images: [
+            "evnets9",
+            "evnets8",
+            "evnets7",
+            "evnets6",
+            "evnets5",
+            "evnets4",
+            "evnets3",
+            "evnets2",
+            "evnets1",
+          ],
+          dir: "right",
+        },
+        {
+          images: [
+            "evnets5",
+            "evnets6",
+            "evnets7",
+            "evnets8",
+            "evnets9",
+            "evnets1",
+            "evnets2",
+            "evnets3",
+            "evnets4",
+          ],
+          dir: "left",
+        },
+      ];
+
+      eventRowDefs.forEach(function (rowDef) {
+        var rowEl = document.createElement("div");
+        rowEl.className = "events-scroll-row";
+
+        var trackEl = document.createElement("div");
+        trackEl.className =
+          "events-track " +
+          (rowDef.dir === "right" ? "scroll-right" : "scroll-left");
+
+        /* duplicate images once for seamless loop (animate -50% = one full set) */
+        var html = "";
+        [0, 1].forEach(function () {
+          rowDef.images.forEach(function (name) {
+            html +=
+              '<div class="event-img-cell"><img src="assets/images/Events/' +
+              name +
+              '.png" alt="Event photo" loading="lazy" /></div>';
+          });
+        });
+
+        trackEl.innerHTML = html;
+        rowEl.appendChild(trackEl);
+        eventsGridEl.appendChild(rowEl);
+      });
+      /* ----------------------------------------------------------
+       TAB SWITCHING
+    ---------------------------------------------------------- */
+      var tabs = document.querySelectorAll(".res-tab");
+      var heroBg = document.getElementById("resHeroBg");
+      var blogsHC = document.getElementById("blogsHeroContent");
+      var eventsHC = document.getElementById("eventsHeroContent");
+      var blogsC = document.getElementById("blogsContent");
+      var eventsC = document.getElementById("eventsContent");
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener("click", function () {
+          var which = tab.getAttribute("data-tab");
+          tabs.forEach(function (t) {
+            t.classList.remove("active");
+          });
+          tab.classList.add("active");
+
+          if (which === "blogs") {
+            heroBg.className = "res-hero-bg blogs-bg";
+            blogsHC.style.display = "";
+            eventsHC.style.display = "none";
+            blogsC.style.display = "";
+            eventsC.style.display = "none";
+          } else {
+            heroBg.className = "res-hero-bg events-bg";
+            blogsHC.style.display = "none";
+            eventsHC.style.display = "";
+            blogsC.style.display = "none";
+            eventsC.style.display = "";
+          }
+        });
+      });
+
+      /* ----------------------------------------------------------
+       BLOG DETAIL
+    ---------------------------------------------------------- */
+      var mainView = document.getElementById("mainView");
+      var blogDetailView = document.getElementById("blogDetailView");
+      var detailTitle = document.getElementById("detailTitle");
+      var detailBody = document.getElementById("detailBody");
+      var detailHeroImg = document.getElementById("detailHeroImg");
+      var backBtn = document.getElementById("backToBlogs");
+
+      function openBlogDetail(idx) {
+        var b = blogs[idx];
+        detailTitle.textContent = b.title;
+        detailHeroImg.src = b.img || "assets/images/Events/bloghero.png";
+        detailHeroImg.alt = b.title;
+
+        // Build body HTML
+        var html = "";
+        b.body.forEach(function (block) {
+          if (block.type === "p") {
+            html += "<p>" + block.text + "</p>";
+          } else if (block.type === "h2") {
+            html += "<h2>" + block.text + "</h2>";
+          } else if (block.type === "ul") {
+            html += "<ul>";
+            block.items.forEach(function (item) {
+              html += "<li>" + item + "</li>";
+            });
+            html += "</ul>";
+          }
+        });
+        detailBody.innerHTML = html;
+
+        mainView.style.display = "none";
+        blogDetailView.style.display = "";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+
+      backBtn.addEventListener("click", function () {
+        blogDetailView.style.display = "none";
+        mainView.style.display = "";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      /* ----------------------------------------------------------
+       FOOTER ACCORDION (mobile)
+    ---------------------------------------------------------- */
+      document.querySelectorAll(".footer-acc-head").forEach(function (head) {
+        head.addEventListener("click", function () {
+          var colId = head.getAttribute("data-col");
+          var col = document.getElementById(colId);
+          col.classList.toggle("acc-open");
+        });
+      });
+    })();
+  </script>
+</body>
+
+</html>
