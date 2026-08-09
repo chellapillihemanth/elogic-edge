@@ -170,7 +170,7 @@
         setLoading(false);
         showAlert(
           "success",
-          "<strong>Thank You!</strong> Your details have been submitted successfully and saved to Google Sheets."
+          "<strong>Form Submitted!</strong> Your details have been submitted successfully."
         );
         form.reset();
         resetFormState(form);
